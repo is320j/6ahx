@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>discord.gg/EHZTXduFm2</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("https://media.discordapp.net/attachments/1428114802118623397/1474147355170308128/ChatGPT_Image_Feb_19_2026_10_55_01_PM.png?ex=6998ca35&is=699778b5&hm=b7f3621ab6af4afbed9fa6906a15f476e19d6aa8fe43a517ad2141f243e493de&=&format=webp&quality=lossless&width=1321&height=881");
+      background-size: cover;
+      font-family: Courier New, Courier, monospace;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .image-container img {
+      width: 750px;
+      height: auto;
+      border: 2px solid #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 255, 0.7);
+    }
+
+    .info {
+      margin-top: 20px;
+      font-size: 1.5em;
+      color: #ffffff;
+      text-shadow: 0px 0px 8px #ffffff,
+                   0px 0px 15px #ffffff,
+                   0px 0px 25px #ffffff;
+      letter-spacing: 4.5px;
+      white-space: pre-wrap;
+    }
+
+    .text {
+      margin-top: 20px;
+      font-size: 3em;
+      color: #ffffff;
+      text-shadow: 0px 0px 8px #ffffff,
+                   0px 0px 15px #ffffff,
+                   0px 0px 25px #ffffff;
+      letter-spacing: 4.5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="image-container">
+  <img src="https://media.discordapp.net/attachments/1428114802118623397/1474145113218351295/rest_Town.png?ex=6998c81f&is=6997769f&hm=fd16d9c43ad940b84dc457f992ed977075015afbab7f19a1156f1e8c50aa08c8&=&format=webp&quality=lossless&width=385&height=385">
+</div>
+
+<audio autoplay loop>
+  <source src="mm.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+ 
+</audio>
+
+<div class="text">عمكم Rest Town </div>
+<div class="info" id="ip-info">
+  <strong>IP:</strong> <span id="ip"></span><br>
+  <span><strong>City:</strong> <span id="city"></span></span><br>
+  <span><strong>Region:</strong> <span id="region"></span></span><br>
+  <span><strong>Country:</strong> <span id="country"></span></span><br>
+  <span><strong>Location:</strong> <span id="loc"></span></span><br>
+  <span><strong>Organization:</strong> <span id="org"></span></span><br>
+  <span><strong>Timezone:</strong> <span id="timezone"></span></span>
+</div>
+
+<div class="text">GG : 6ahx : https://discord.gg/PQYDaBhY</div>
+
+<script>
+fetch('https://ipinfo.io/json')
+  .then(response => response.json())
+  .then(data => {
+    delete data.readme;
+    const infoDiv = document.getElementById('ip-info');
+    infoDiv.textContent = JSON.stringify(data, null, 2);
+  });
+</script>
+
+</body>
+</html>
